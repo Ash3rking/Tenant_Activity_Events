@@ -1,0 +1,24 @@
+# Credentials -- never commit these
+.env
+.env.local
+*.pem
+
+# Extracted activity data. This is real tenant telemetry: user email
+# addresses, IP addresses, workspace and report names and GUIDs.
+activity_events_flat.csv
+activity_events_flat.parquet
+activity_events_bucketed.csv
+activity_events_reports_only.csv
+activity_events.csv
+PBIActivityEvents*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
