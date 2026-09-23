@@ -144,7 +144,7 @@ python smoke_test.py --start-date 2026-08-10 --end-date 2026-08-16 --output-form
 # See every option without running anything
 python smoke_test.py --help
 
-# Set environment variables in terminal
+# Set environment variables in terminal, use the value** appears only once
 $env:POWERBI_TENANT_ID = "..."
 $env:POWERBI_CLIENT_ID = "..."
 $env:POWERBI_CLIENT_SECRET = "..."
@@ -152,7 +152,7 @@ $env:POWERBI_CLIENT_SECRET = "..."
 
 ```
 ## Why the activity log cannot see page changes. 
-When you open a report, the browser requests it from the service, and the server logs a ViewReport event. When you then click to page two, the page definitions are already sitting in your browser. No request goes back to the server, so there is nothing for the server to log. Microsoft puts it plainly: switching report pages "doesn't issue a report load request to the server since the page definition is already in the browser."
+When you  open a report, the browser requests it from the service, and the server logs a ViewReport event. When you then click to page two, the page definitions are already sitting in your browser. No request goes back to the server, so there is nothing for the server to log. Microsoft puts it plainly: switching report pages "doesn't issue a report load request to the server since the page definition is already in the browser."
 
 The usage metrics report gets page data by having the browser itself phone home. That is client-side telemetry, and it flows into an internal usage metrics store rather than the audit log.
 
